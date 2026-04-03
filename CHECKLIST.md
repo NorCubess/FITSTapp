@@ -13,23 +13,25 @@
 - [x] **1d.** Run `npm run dev` and confirm the app loads at localhost:3000
 - [x] **1e.** Install Supabase JS SDK: `npm install @supabase/supabase-js`
 - [x] **1f.** Install Supabase Auth helpers for Next.js: `npm install @supabase/ssr`
-- [ ] **1g.** Confirm Tailwind is working by adding a test class to `src/app/page.tsx` and checking the browser
-- [ ] **1h.** Push the project to a new GitHub repository
-- [ ] **1i.** Connect the GitHub repo to Vercel and trigger a first deployment
-- [ ] **1j.** Confirm the live Vercel URL loads correctly
+- [x] **1g.** Confirm Tailwind is working by adding a test class to `src/app/page.tsx` and checking the browser
+- [x] **1h.** Push the project to a new GitHub repository
+- [x] **1i.** Connect the GitHub repo to Vercel and trigger a first deployment
+- [x] **1j.** Confirm the live Vercel URL loads correctly
 
 ---
 
 ## Step 2 — Design your Supabase database schema
 
-- [ ] **2a.** Log in to Supabase and create a new project named `fitstop`
-- [ ] **2b.** Create a `members` table with columns: id (uuid, PK), full_name (text), email (text), phone (text), created_at (timestamptz)
-- [ ] **2c.** Create a `memberships` table with columns: id (uuid, PK), member_id (uuid, FK → members.id), type (text), start_date (date), end_date (date), sessions_remaining (int), status (text: active/expired)
-- [ ] **2d.** Create an `attendance` table with columns: id (uuid, PK), member_id (uuid, FK → members.id), scanned_at (timestamptz), method (text: qr/manual)
-- [ ] **2e.** Create a `products` table with columns: id (uuid, PK), name (text), price (numeric), stock_quantity (int), category (text)
-- [ ] **2f.** Create a `transactions` table with columns: id (uuid, PK), type (text: membership/product), items (jsonb), total_amount (numeric), payment_method (text), created_at (timestamptz)
-- [ ] **2g.** Enable Row Level Security (RLS) on all tables in Supabase
-- [ ] **2h.** Create a `.env.local` file in the project root with `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` from your Supabase project settings
+- [x] **2a.** Log in to Supabase and create a new project named `fitstop`
+(project name: FITSTOP || password: abYADyAqCZjoPofP)
+
+- [x] **2b.** Create a `members` table with columns: id (uuid, PK), full_name (text), email (text), phone (text), created_at (timestamptz)
+- [x] **2c.** Create a `memberships` table with columns: id (uuid, PK), member_id (uuid, FK → members.id), type (text), start_date (date), end_date (date), sessions_remaining (int), status (text: active/expired)
+- [x] **2d.** Create an `attendance` table with columns: id (uuid, PK), member_id (uuid, FK → members.id), scanned_at (timestamptz), method (text: qr/manual)
+- [x] **2e.** Create a `products` table with columns: id (uuid, PK), name (text), price (numeric), stock_quantity (int), category (text)
+- [x] **2f.** Create a `transactions` table with columns: id (uuid, PK), type (text: membership/product), items (jsonb), total_amount (numeric), payment_method (text), created_at (timestamptz)
+- [x] **2g.** Enable Row Level Security (RLS) on all tables in Supabase
+- [x] **2h.** Create a `.env.local` file in the project root with `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` from your Supabase project settings
 - [ ] **2i.** Create `src/lib/supabase/client.ts` for browser-side Supabase client using `createBrowserClient` from `@supabase/ssr`
 - [ ] **2j.** Create `src/lib/supabase/server.ts` for server-side Supabase client using `createServerClient` from `@supabase/ssr`
 - [ ] **2k.** Create `src/types/database.ts` to define TypeScript interfaces for all your tables (Member, Membership, Attendance, Product, Transaction)
