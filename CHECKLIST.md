@@ -32,24 +32,24 @@
 - [x] **2f.** Create a `transactions` table with columns: id (uuid, PK), type (text: membership/product), items (jsonb), total_amount (numeric), payment_method (text), created_at (timestamptz)
 - [x] **2g.** Enable Row Level Security (RLS) on all tables in Supabase
 - [x] **2h.** Create a `.env.local` file in the project root with `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` from your Supabase project settings
-- [ ] **2i.** Create `src/lib/supabase/client.ts` for browser-side Supabase client using `createBrowserClient` from `@supabase/ssr`
-- [ ] **2j.** Create `src/lib/supabase/server.ts` for server-side Supabase client using `createServerClient` from `@supabase/ssr`
-- [ ] **2k.** Create `src/types/database.ts` to define TypeScript interfaces for all your tables (Member, Membership, Attendance, Product, Transaction)
-- [ ] **2l.** Add `.env.local` to `.gitignore` so keys are not pushed to GitHub
+- [x] **2i.** Create `src/lib/supabase/client.ts` for browser-side Supabase client using `createBrowserClient` from `@supabase/ssr`
+- [x] **2j.** Create `src/lib/supabase/server.ts` for server-side Supabase client using `createServerClient` from `@supabase/ssr`
+- [x] **2k.** Create `src/types/database.ts` to define TypeScript interfaces for all your tables (Member, Membership, Attendance, Product, Transaction)
+- [x] **2l.** Add `.env.local` to `.gitignore` so keys are not pushed to GitHub
 
 ---
 
 ## Step 3 — Build admin login and route protection
 
-- [ ] **3a.** Enable Email/Password auth in Supabase dashboard under Authentication > Providers
-- [ ] **3b.** Manually create the first admin user in Supabase Authentication > Users
-- [ ] **3c.** Create `src/app/login/page.tsx` with a login form component using React state for email and password fields
-- [ ] **3d.** Wire the login form to `supabase.auth.signInWithPassword()` using the browser client
-- [ ] **3e.** Create a Next.js middleware file at `src/middleware.ts` to protect all `/dashboard` routes — redirect unauthenticated users to `/login`
-- [ ] **3f.** Set up the app folder structure: `src/app/login/`, `src/app/dashboard/`, `src/app/dashboard/pos/`, `src/app/dashboard/inventory/`, `src/app/dashboard/members/`, `src/app/dashboard/scanner/`
-- [ ] **3g.** Create `src/app/dashboard/layout.tsx` as the shared layout for all dashboard pages (sidebar, nav)
-- [ ] **3h.** Add a logout button in the dashboard layout that calls `supabase.auth.signOut()` and redirects to `/login`
-- [ ] **3i.** Test: confirm unauthenticated users are redirected to `/login` when accessing any `/dashboard` route
+- [x] **3a.** Enable Email/Password auth in Supabase dashboard under Authentication > Providers
+- [x] **3b.** Manually create the first admin user in Supabase Authentication > Users
+- [x] **3c.** Create `src/app/login/page.tsx` with a login form component using React state for email and password fields
+- [x] **3d.** Wire the login form to `supabase.auth.signInWithPassword()` using the browser client
+- [x] **3e.** Create a Next.js middleware file at `src/proxy.ts` to protect all `/dashboard` routes — redirect unauthenticated users to `/login`
+- [x] **3f.** Set up the app folder structure: `src/app/login/`, `src/app/dashboard/`, `src/app/dashboard/pos/`, `src/app/dashboard/inventory/`, `src/app/dashboard/members/`, `src/app/dashboard/scanner/`
+- [x] **3g.** Create `src/app/dashboard/layout.tsx` as the shared layout for all dashboard pages (sidebar, nav)
+- [x] **3h.** Add a logout button in the dashboard layout that calls `supabase.auth.signOut()` and redirects to `/login`
+- [x] **3i.** Test: confirm unauthenticated users are redirected to `/login` when accessing any `/dashboard` route
 
 ---
 
