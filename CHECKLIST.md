@@ -55,28 +55,28 @@
 
 ## Step 4 — Build the QR scanner dashboard
 
-- [ ] **4a.** Install the QR scanner library: `npm install html5-qrcode`
-- [ ] **4b.** Create `src/app/dashboard/scanner/page.tsx` as a Client Component (add `'use client'` at the top)
-- [ ] **4c.** Mount the `Html5QrcodeScanner` inside a `useEffect` hook targeting a div with a fixed id
-- [ ] **4d.** On successful scan, extract the member UUID from the QR string and call a handler function
-- [ ] **4e.** Query Supabase `members` and `memberships` tables using the scanned UUID — type the response with your `Member` and `Membership` interfaces
-- [ ] **4f.** Display the member's name, membership type, and expiry/sessions remaining in a result card
-- [ ] **4g.** Show a clear visual indicator: green (Tailwind `bg-green-100`) for valid, red (`bg-red-100`) for expired
-- [ ] **4h.** On valid scan, insert a row into the `attendance` table with member_id and scanned_at timestamp
-- [ ] **4i.** If membership type is session-based, decrement `sessions_remaining` in the `memberships` table
-- [ ] **4j.** Handle edge cases: unknown QR code, expired membership, zero sessions remaining — show appropriate error messages
-- [ ] **4k.** Test end-to-end: scan a manually generated QR and confirm attendance is recorded in Supabase
+- [x] **4a.** Install the QR scanner library: `npm install html5-qrcode`
+- [x] **4b.** Create `src/app/dashboard/scanner/page.tsx` as a Client Component (add `'use client'` at the top)
+- [x] **4c.** Mount the `Html5QrcodeScanner` inside a `useEffect` hook targeting a div with a fixed id
+- [x] **4d.** On successful scan, extract the member UUID from the QR string and call a handler function
+- [x] **4e.** Query Supabase `members` and `memberships` tables using the scanned UUID — type the response with your `Member` and `Membership` interfaces
+- [x] **4f.** Display the member's name, membership type, and expiry/sessions remaining in a result card
+- [x] **4g.** Show a clear visual indicator: green (Tailwind `bg-green-100`) for valid, red (`bg-red-100`) for expired
+- [x] **4h.** On valid scan, insert a row into the `attendance` table with member_id and scanned_at timestamp
+- [x] **4i.** If membership type is session-based, decrement `sessions_remaining` in the `memberships` table
+- [x] **4j.** Handle edge cases: unknown QR code, expired membership, zero sessions remaining — show appropriate error messages
+- [x] **4k.** Test end-to-end: scan a manually generated QR and confirm attendance is recorded in Supabase
 
 ---
 
 ## Step 5 — Build the POS and inventory
 
-- [ ] **5a.** Create `src/app/dashboard/pos/page.tsx` as a Client Component with a two-column layout: product grid (left) and cart panel (right)
-- [ ] **5b.** Fetch all products from Supabase `products` table using `useEffect` on mount — type results with your `Product` interface
-- [ ] **5c.** Define a `CartItem` TypeScript type (product + quantity) and manage cart state with `useState`
-- [ ] **5d.** Render product cards with an Add to Cart button; display cart items with quantity controls and a running total
-- [ ] **5e.** Add a checkout button that inserts a row into the `transactions` table with cart contents and total
-- [ ] **5f.** On checkout, decrement `stock_quantity` for each sold product in the `products` table
+- [x] **5a.** Create `src/app/dashboard/pos/page.tsx` as a Client Component with a two-column layout: product grid (left) and cart panel (right)
+- [x] **5b.** Fetch all products from Supabase `products` table using `useEffect` on mount — type results with your `Product` interface
+- [x] **5c.** Define a `CartItem` TypeScript type (product + quantity) and manage cart state with `useState`
+- [x] **5d.** Render product cards with an Add to Cart button; display cart items with quantity controls and a running total
+- [x] **5e.** Add a checkout button that inserts a row into the `transactions` table with cart contents and total
+- [x] **5f.** On checkout, decrement `stock_quantity` for each sold product in the `products` table
 - [ ] **5g.** Create `src/app/dashboard/inventory/page.tsx` — fetch and list all products with current stock levels
 - [ ] **5h.** Add a form in the inventory page to create new products and update existing stock quantities
 - [ ] **5i.** Highlight low-stock products (less than 5 units) using Tailwind amber/red classes
